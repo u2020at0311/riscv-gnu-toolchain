@@ -2,7 +2,7 @@ RISC-V GNU Compiler Toolchain
 =============================
 
 This is the RISC-V C and C++ cross-compiler クロス編纂機. It supports two build modes:
-a generic 汎用　ELF/Newlib toolchain　ツール鎖 and a more sophisticated 粋な Linux-ELF/glibc
+a generic 汎用 ELF/Newlib toolchain ツール鎖 and a more sophisticated 粋な Linux-ELF/glibc
 toolchain.
 
 ###  Getting the sources
@@ -59,23 +59,23 @@ run the following command:
 
 You should now be able to use riscv64-unknown-elf-gcc and its cousins.
 
-### Installation (Linux)
+### Installation 導入 (Linux)
 
-To build the Linux cross-compiler, pick an install path.  If you choose,
-say, `/opt/riscv`, then add `/opt/riscv/bin` to your `PATH` now.  Then, simply
-run the following command:
+To build 構築するには the Linux cross-compiler クロス編纂機, pick 選ぶ an install path 導入 経路.  If you choose 洗濯する,
+say, `/opt/riscv`, then だったら add `/opt/riscv/bin` 追加する to your `PATH` PATHに now 今.  Then, それから simply 簡素
+run 実行する the following command つぎの 命令: 
 
     ./configure --prefix=/opt/riscv
     make linux
 
-The build defaults to targeting RV64GC (64-bit) with glibc, even on a 32-bit
+The build 構築 defaults 初期値 to targeting 目標にする RV64GC (64-bit) with glibc で, even on a 32-bit
 build environment. To build the 32-bit RV32GC toolchain, use:
 
     ./configure --prefix=/opt/riscv --with-arch=rv32gc --with-abi=ilp32d
     make linux
 
-In case you prefer musl libc over glibc, configure just like above and opt for
-`make musl` instead of `make linux`.
+In case you prefer 好む場合 musl libc over より glibc, configure just like above and opt for
+`make musl` instead of 代わりに `make linux`.
 
 Supported architectures are rv32i or rv64i plus standard extensions (a)tomics,
 (m)ultiplication and division, (f)loat, (d)ouble, or (g)eneral for MAFD.
@@ -86,8 +86,8 @@ use only), lp64 lp64f lp64d (same but with 64-bit long and pointers).
 
 ### Installation (Newlib/Linux multilib)
 
-To build either cross-compiler with support for both 32-bit and
-64-bit, run the following command:
+To build 構築する either cross-compiler 両方の クロス編纂機  with support for 支援 both 両方 32-bit and
+64-bit, run 実行する the following command 次の命令:
 
     ./configure --prefix=/opt/riscv --enable-multilib
     
@@ -105,10 +105,10 @@ The musl compiler (riscv64-unknown-linux-musl-) will only be able to target
 The `--enable-multilib` flag therefore does not actually enable multilib support
 for musl libc.
 
-### Troubleshooting Build Problems
+### Troubleshooting 困った時 Build 構築 Problems 問題
 
-Builds work best if installing into an empty directory.  If you build a
-hard-float toolchain and then try to build a soft-float toolchain with
+Builds work best 構築は うまくいく if installing インストールすると into an empty directory 空の ディ呉トリへ.  If you build a
+hard-float toolchain "hard-float" ツール鎖 構築する and then try to build a soft-float toolchain with
 the same --prefix directory, then the build scripts may get confused
 and exit with a linker error complaining that hard float code can't be
 linked with soft float code.  Removing the existing toolchain first, or
