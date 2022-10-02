@@ -1,36 +1,36 @@
 RISC-V GNU Compiler Toolchain
 =============================
 
-This is the RISC-V C and C++ cross-compiler. It supports two build modes:
-a generic ELF/Newlib toolchain and a more sophisticated Linux-ELF/glibc
+This is the RISC-V C and C++ cross-compiler クロス編纂機. It supports two build modes:
+a generic 汎用　ELF/Newlib toolchain　ツール鎖 and a more sophisticated 粋な Linux-ELF/glibc
 toolchain.
 
 ###  Getting the sources
 
-This repository uses submodules, but submodules will fetch automatically on demand,
-so `--recursive` or `git submodule update --init --recursive` is not needed.
+This repository uses submodules, but submodules will fetch automatically on demand 要求が あると,
+so そう`--recursive` or `git submodule update --init --recursive` is not needed 必要ない.
 
     $ git clone https://github.com/riscv/riscv-gnu-toolchain
 
-**Warning: git clone takes around 6.65 GB of disk and download size**
+**Warning 警戒: git clone takes 摂る around 6.65 GB of disk and download size**
 
-### Prerequisites
+### Prerequisites 前提条件
 
-Several standard packages are needed to build the toolchain.  
+Several いくつか standard packages 標準の 小包 are needed は必要 to build 構築するため the toolchain 道具鎖.  
 
-On Ubuntu, executing the following command should suffice:
+On Ubuntu ウブンツで, executing 実行する the following command 次の命令 should suffice 事足りる:
 
     $ sudo apt-get install autoconf automake autotools-dev curl python3 libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev libexpat-dev
 
-On Fedora/CentOS/RHEL OS, executing the following command should suffice:
+On Fedora/CentOS/RHEL OS フィードラで, executing the following command should suffice:
 
     $ sudo yum install autoconf automake python3 libmpc-devel mpfr-devel gmp-devel gawk  bison flex texinfo patchutils gcc gcc-c++ zlib-devel expat-devel
     
-On Arch Linux, executing the following command should suffice:
+On Arch Linux アーチで, executing the following command should suffice:
 
     $ sudo pacman -Syyu autoconf automake curl python3 libmpc mpfr gmp gawk base-devel bison flex texinfo gperf libtool patchutils bc zlib expat
 
-Also available for Arch users on the AUR: [https://aur.archlinux.org/packages/riscv-gnu-toolchain/](https://aur.archlinux.org/packages/riscv-gnu-toolchain/)
+Also available もまた可能 for Arch users アーチの仕様者のため on the AUR: [https://aur.archlinux.org/packages/riscv-gnu-toolchain/](https://aur.archlinux.org/packages/riscv-gnu-toolchain/)
 
 On OS X, you can use [Homebrew](http://brew.sh) to install the dependencies:
 
