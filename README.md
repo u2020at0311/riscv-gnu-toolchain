@@ -107,15 +107,15 @@ for musl libc.
 
 ### Troubleshooting 困った時 Build 構築 Problems 問題
 
-Builds work best 構築は うまくいく if installing インストールすると into an empty directory 空の ディ呉トリへ.  If you build a
-hard-float toolchain "hard-float" ツール鎖 構築する and then try to build a soft-float toolchain with
-the same --prefix directory, then the build scripts may get confused
-and exit with a linker error complaining that hard float code can't be
-linked with soft float code.  Removing the existing toolchain first, or
-using a different prefix for the second build, avoids the problem.  It
-is OK to build one newlib and one linux toolchain with the same prefix.
-But you should avoid building two newlib or two linux toolchains with
-the same prefix.
+Builds work best 構築は 最高に 機能する if installing 導入する場合 into an empty directory 空の名簿に.  If you build a
+hard-float toolchain 硬い 浮動 道具鎖 構築するなら and then try to build a soft-float toolchain with
+the same --prefix directory, then the build scripts 構築 スクリプト may get confused 混乱する かもしれない
+and exit 終了する with a linker error 結合 失敗で complaining 文句を言って that hard float code can't be
+linked with soft float code 硬い 浮動 コードは 柔らかい コードと 結合される できない.  Removing the existing toolchain first 存在する 道具鎖を 取り除いて, or または
+using a different prefix 異なる 接頭辞で for the second build ２回め 構築 向けに, avoids 回避する the problem この問題.  It
+is OK to build 構築することは 良し one newlib and one linux toolchain with the same prefix "NEWLIB"と linux 道具鎖 同じ 接頭辞で .
+But you should avoid building しかし 構築することは 割けた方がよい two newlib ２つの"NEWLIB" or two linux toolchains ２つの"linux"道具鎖 with
+the same prefix 同じ接頭辞を付けて.
 
 If building a linux toolchain on a MacOS system, or on a Windows system
 using the Linux subsystem or cygwin, you must ensure that the filesystem
