@@ -2,7 +2,7 @@ RISC-V GNU Compiler Toolchain
 =============================
 
 This is the RISC-V C and C++ cross-compiler クロス編纂機. It supports two build modes:
-a generic 汎用 ELF/Newlib toolchain ツール鎖 and a more sophisticated 粋な Linux-ELF/glibc
+a generic 汎用 ELF/Newlib toolchain 道具鎖 and a more sophisticated 粋な Linux-ELF/glibc
 toolchain.
 
 ###  Getting the sources
@@ -12,7 +12,7 @@ so そう`--recursive` or `git submodule update --init --recursive` is not neede
 
     $ git clone https://github.com/riscv/riscv-gnu-toolchain
 
-**Warning 警戒: git clone takes 摂る around 6.65 GB of disk and download size**
+**Warning 警戒: git clone takes 摂取する around 6.65 GB およそ"6.6GB" of disk 円盤の and download size 落とす 大きさの **    
 
 ### Prerequisites 前提条件
 
